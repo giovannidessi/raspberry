@@ -1,0 +1,549 @@
+{
+ "ads": [
+  {
+   "item": {
+    "urn": "urn:subito:1000",
+    "subject": "Volkswagen Golf 1.6 TDI Business 2017",
+    "body": "Auto in ottime condizioni, tagliandi certificati, navigatore.",
+    "urls": {
+     "default": "https://www.subito.it/auto/golf-1000.htm"
+    },
+    "features": [
+     {
+      "uri": "/price",
+      "values": [
+       {
+        "key": "price",
+        "value": "11500"
+       }
+      ]
+     },
+     {
+      "uri": "/mileage",
+      "values": [
+       {
+        "key": "mileage",
+        "value": "95000"
+       }
+      ]
+     },
+     {
+      "uri": "/register_year",
+      "values": [
+       {
+        "key": "register_year",
+        "value": "2017"
+       }
+      ]
+     },
+     {
+      "uri": "/car_brand",
+      "values": [
+       {
+        "key": "car_brand",
+        "value": "Volkswagen"
+       }
+      ]
+     },
+     {
+      "uri": "/car_model",
+      "values": [
+       {
+        "key": "car_model",
+        "value": "Golf"
+       }
+      ]
+     },
+     {
+      "uri": "/fuel",
+      "values": [
+       {
+        "key": "fuel",
+        "value": "Diesel"
+       }
+      ]
+     },
+     {
+      "uri": "/gearbox",
+      "values": [
+       {
+        "key": "gearbox",
+        "value": "Manuale"
+       }
+      ]
+     },
+     {
+      "uri": "/horse_power",
+      "values": [
+       {
+        "key": "horse_power",
+        "value": "115"
+       }
+      ]
+     }
+    ],
+    "geo": {
+     "town": {
+      "value": "Milano"
+     },
+     "city": {
+      "value": "Milano",
+      "short_name": "MI"
+     },
+     "map": {
+      "latitude": 45.46,
+      "longitude": 9.19
+     }
+    },
+    "advertiser": {
+     "company": true
+    },
+    "images": [
+     {
+      "scale": [
+       {
+        "secureuri": "https://img.subito.it/a.jpg"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "item": {
+    "urn": "urn:subito:1001",
+    "subject": "Volkswagen Golf 1.6 TDI Business 2015",
+    "body": "Auto in ottime condizioni, tagliandi certificati, navigatore.",
+    "urls": {
+     "default": "https://www.subito.it/auto/golf-1001.htm"
+    },
+    "features": [
+     {
+      "uri": "/price",
+      "values": [
+       {
+        "key": "price",
+        "value": "9900"
+       }
+      ]
+     },
+     {
+      "uri": "/mileage",
+      "values": [
+       {
+        "key": "mileage",
+        "value": "140000"
+       }
+      ]
+     },
+     {
+      "uri": "/register_year",
+      "values": [
+       {
+        "key": "register_year",
+        "value": "2015"
+       }
+      ]
+     },
+     {
+      "uri": "/car_brand",
+      "values": [
+       {
+        "key": "car_brand",
+        "value": "Volkswagen"
+       }
+      ]
+     },
+     {
+      "uri": "/car_model",
+      "values": [
+       {
+        "key": "car_model",
+        "value": "Golf"
+       }
+      ]
+     },
+     {
+      "uri": "/fuel",
+      "values": [
+       {
+        "key": "fuel",
+        "value": "Diesel"
+       }
+      ]
+     },
+     {
+      "uri": "/gearbox",
+      "values": [
+       {
+        "key": "gearbox",
+        "value": "Manuale"
+       }
+      ]
+     },
+     {
+      "uri": "/horse_power",
+      "values": [
+       {
+        "key": "horse_power",
+        "value": "105"
+       }
+      ]
+     }
+    ],
+    "geo": {
+     "town": {
+      "value": "Milano"
+     },
+     "city": {
+      "value": "Milano",
+      "short_name": "MI"
+     },
+     "map": {
+      "latitude": 45.46,
+      "longitude": 9.19
+     }
+    },
+    "advertiser": {
+     "company": false
+    },
+    "images": [
+     {
+      "scale": [
+       {
+        "secureuri": "https://img.subito.it/a.jpg"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "item": {
+    "urn": "urn:subito:1002",
+    "subject": "Volkswagen Golf 1.6 TDI Business 2019",
+    "body": "Auto in ottime condizioni, tagliandi certificati, navigatore.",
+    "urls": {
+     "default": "https://www.subito.it/auto/golf-1002.htm"
+    },
+    "features": [
+     {
+      "uri": "/price",
+      "values": [
+       {
+        "key": "price",
+        "value": "14500"
+       }
+      ]
+     },
+     {
+      "uri": "/mileage",
+      "values": [
+       {
+        "key": "mileage",
+        "value": "60000"
+       }
+      ]
+     },
+     {
+      "uri": "/register_year",
+      "values": [
+       {
+        "key": "register_year",
+        "value": "2019"
+       }
+      ]
+     },
+     {
+      "uri": "/car_brand",
+      "values": [
+       {
+        "key": "car_brand",
+        "value": "Volkswagen"
+       }
+      ]
+     },
+     {
+      "uri": "/car_model",
+      "values": [
+       {
+        "key": "car_model",
+        "value": "Golf"
+       }
+      ]
+     },
+     {
+      "uri": "/fuel",
+      "values": [
+       {
+        "key": "fuel",
+        "value": "Diesel"
+       }
+      ]
+     },
+     {
+      "uri": "/gearbox",
+      "values": [
+       {
+        "key": "gearbox",
+        "value": "Manuale"
+       }
+      ]
+     },
+     {
+      "uri": "/horse_power",
+      "values": [
+       {
+        "key": "horse_power",
+        "value": "150"
+       }
+      ]
+     }
+    ],
+    "geo": {
+     "town": {
+      "value": "Milano"
+     },
+     "city": {
+      "value": "Milano",
+      "short_name": "MI"
+     },
+     "map": {
+      "latitude": 45.46,
+      "longitude": 9.19
+     }
+    },
+    "advertiser": {
+     "company": true
+    },
+    "images": [
+     {
+      "scale": [
+       {
+        "secureuri": "https://img.subito.it/a.jpg"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "item": {
+    "urn": "urn:subito:1003",
+    "subject": "Volkswagen Golf 1.6 TDI Business 2014",
+    "body": "Auto in ottime condizioni, tagliandi certificati, navigatore.",
+    "urls": {
+     "default": "https://www.subito.it/auto/golf-1003.htm"
+    },
+    "features": [
+     {
+      "uri": "/price",
+      "values": [
+       {
+        "key": "price",
+        "value": "8500"
+       }
+      ]
+     },
+     {
+      "uri": "/mileage",
+      "values": [
+       {
+        "key": "mileage",
+        "value": "175000"
+       }
+      ]
+     },
+     {
+      "uri": "/register_year",
+      "values": [
+       {
+        "key": "register_year",
+        "value": "2014"
+       }
+      ]
+     },
+     {
+      "uri": "/car_brand",
+      "values": [
+       {
+        "key": "car_brand",
+        "value": "Volkswagen"
+       }
+      ]
+     },
+     {
+      "uri": "/car_model",
+      "values": [
+       {
+        "key": "car_model",
+        "value": "Golf"
+       }
+      ]
+     },
+     {
+      "uri": "/fuel",
+      "values": [
+       {
+        "key": "fuel",
+        "value": "Diesel"
+       }
+      ]
+     },
+     {
+      "uri": "/gearbox",
+      "values": [
+       {
+        "key": "gearbox",
+        "value": "Manuale"
+       }
+      ]
+     },
+     {
+      "uri": "/horse_power",
+      "values": [
+       {
+        "key": "horse_power",
+        "value": "105"
+       }
+      ]
+     }
+    ],
+    "geo": {
+     "town": {
+      "value": "Milano"
+     },
+     "city": {
+      "value": "Milano",
+      "short_name": "MI"
+     },
+     "map": {
+      "latitude": 45.46,
+      "longitude": 9.19
+     }
+    },
+    "advertiser": {
+     "company": false
+    },
+    "images": [
+     {
+      "scale": [
+       {
+        "secureuri": "https://img.subito.it/a.jpg"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "item": {
+    "urn": "urn:subito:1004",
+    "subject": "Volkswagen Golf 1.6 TDI Business 2018",
+    "body": "Auto in ottime condizioni, tagliandi certificati, navigatore.",
+    "urls": {
+     "default": "https://www.subito.it/auto/golf-1004.htm"
+    },
+    "features": [
+     {
+      "uri": "/price",
+      "values": [
+       {
+        "key": "price",
+        "value": "12900"
+       }
+      ]
+     },
+     {
+      "uri": "/mileage",
+      "values": [
+       {
+        "key": "mileage",
+        "value": "88000"
+       }
+      ]
+     },
+     {
+      "uri": "/register_year",
+      "values": [
+       {
+        "key": "register_year",
+        "value": "2018"
+       }
+      ]
+     },
+     {
+      "uri": "/car_brand",
+      "values": [
+       {
+        "key": "car_brand",
+        "value": "Volkswagen"
+       }
+      ]
+     },
+     {
+      "uri": "/car_model",
+      "values": [
+       {
+        "key": "car_model",
+        "value": "Golf"
+       }
+      ]
+     },
+     {
+      "uri": "/fuel",
+      "values": [
+       {
+        "key": "fuel",
+        "value": "Diesel"
+       }
+      ]
+     },
+     {
+      "uri": "/gearbox",
+      "values": [
+       {
+        "key": "gearbox",
+        "value": "Manuale"
+       }
+      ]
+     },
+     {
+      "uri": "/horse_power",
+      "values": [
+       {
+        "key": "horse_power",
+        "value": "115"
+       }
+      ]
+     }
+    ],
+    "geo": {
+     "town": {
+      "value": "Milano"
+     },
+     "city": {
+      "value": "Milano",
+      "short_name": "MI"
+     },
+     "map": {
+      "latitude": 45.46,
+      "longitude": 9.19
+     }
+    },
+    "advertiser": {
+     "company": true
+    },
+    "images": [
+     {
+      "scale": [
+       {
+        "secureuri": "https://img.subito.it/a.jpg"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carhunt — ricerca auto usate</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">🚗</span> <strong>Carhunt</strong></div>
+  <div class="status" id="status">caricamento…</div>
+  <div class="topbar-actions">
+    <button class="btn ghost" id="btn-telegram">Prova Telegram</button>
+    <button class="btn" id="btn-run-all">Cerca adesso</button>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <h2>Ricerche</h2>
+      <button class="btn small" id="btn-new">+ Nuova</button>
+    </div>
+    <ul class="search-list" id="search-list"></ul>
+    <p class="hint">Il controllo automatico gira <span id="interval">ogni ora</span> e manda su Telegram solo gli annunci nuovi sopra la soglia.</p>
+  </aside>
+
+  <section class="content" id="content">
+    <div class="empty" id="empty">
+      <h2>Nessuna ricerca ancora</h2>
+      <p>Crea la prima ricerca: scegli marca e modello, imposta budget e chilometri, decidi quanto conta ogni caratteristica e lascia lavorare il Raspberry.</p>
+      <button class="btn" id="btn-new-2">Crea la prima ricerca</button>
+    </div>
+
+    <div id="detail" hidden>
+      <div class="detail-head">
+        <input class="title-input" id="f-name" placeholder="Nome della ricerca">
+        <div class="detail-actions">
+          <label class="switch"><input type="checkbox" id="f-enabled"><span>Attiva</span></label>
+          <button class="btn ghost" id="btn-delete">Elimina</button>
+          <button class="btn ghost" id="btn-run">Cerca ora</button>
+          <button class="btn" id="btn-save">Salva</button>
+        </div>
+      </div>
+
+      <div class="panels">
+        <details class="panel" id="panel-criteria" open>
+          <summary>1. Cosa cerchiamo</summary>
+          <div class="grid">
+            <label>Marca<input id="c-make" placeholder="Volkswagen"></label>
+            <label>Modello<input id="c-model" placeholder="Golf"></label>
+            <label>Parole chiave<input id="c-keywords" placeholder="1.6 TDI"></label>
+            <label>Prezzo minimo €<input id="c-price_min" type="number" min="0" step="100"></label>
+            <label>Prezzo massimo €<input id="c-price_max" type="number" min="0" step="100"></label>
+            <label>Anno minimo<input id="c-year_min" type="number" min="1980" max="2030"></label>
+            <label>Anno massimo<input id="c-year_max" type="number" min="1980" max="2030"></label>
+            <label>Km massimi<input id="c-km_max" type="number" min="0" step="1000"></label>
+            <label>Potenza minima (CV)<input id="c-power_min" type="number" min="0"></label>
+            <label>Cambio
+              <select id="c-gearbox">
+                <option value="">indifferente</option>
+                <option value="Manuale">manuale</option>
+                <option value="Automatico">automatico</option>
+              </select>
+            </label>
+            <label>Venditore
+              <select id="c-seller">
+                <option value="">indifferente</option>
+                <option value="privato">privato</option>
+                <option value="concessionario">concessionario</option>
+              </select>
+            </label>
+            <label>Regione (Subito)<input id="c-region" placeholder="lombardia"></label>
+            <label>Alimentazioni<input id="c-fuels" placeholder="Diesel, Benzina, GPL"></label>
+            <label>Deve avere<input id="c-must_have" placeholder="tagliandi, unico proprietario"></label>
+            <label>Meglio se ha<input id="c-nice_to_have" placeholder="navigatore, sensori, gancio traino"></label>
+            <label>Da escludere<input id="c-exclude" placeholder="incidentata, per ricambi, sinistrata"></label>
+            <label>Latitudine casa<input id="c-home_lat" type="number" step="0.0001" placeholder="45.4642"></label>
+            <label>Longitudine casa<input id="c-home_lon" type="number" step="0.0001" placeholder="9.1900"></label>
+            <label>Distanza massima (km)<input id="c-max_distance_km" type="number" min="0" step="10"></label>
+          </div>
+          <fieldset class="providers">
+            <legend>Portali da interrogare</legend>
+            <div id="providers"></div>
+          </fieldset>
+        </details>
+
+        <details class="panel" open>
+          <summary>2. Quanto conta ogni cosa</summary>
+          <p class="panel-hint">Sposta i cursori: la classifica qui sotto si aggiorna subito, senza salvare. Salva quando ti piace.</p>
+          <div id="weights" class="weights"></div>
+        </details>
+
+        <details class="panel" open>
+          <summary>3. Notifiche Telegram</summary>
+          <div class="grid">
+            <label>Avvisami solo sopra punteggio
+              <input id="f-min_score" type="range" min="0" max="100" step="5">
+              <output id="f-min_score-out"></output>
+            </label>
+            <label>Chat Telegram (opzionale)<input id="f-chat" placeholder="usa quella del file .env"></label>
+          </div>
+        </details>
+      </div>
+
+      <div class="results-head">
+        <h2>Annunci trovati <span class="count" id="results-count">0</span></h2>
+        <div class="results-tools">
+          <label class="inline"><input type="checkbox" id="only-good"> solo sopra soglia</label>
+          <select id="sort">
+            <option value="score">ordina per punteggio</option>
+            <option value="deal">ordina per affare</option>
+            <option value="price">ordina per prezzo</option>
+            <option value="km">ordina per km</option>
+            <option value="recent">ordina per novità</option>
+          </select>
+        </div>
+      </div>
+      <div id="results" class="results"></div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+<script src="/app.js"></script>
+</body>
+</html>
