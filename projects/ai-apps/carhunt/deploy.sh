@@ -2,9 +2,9 @@
 #
 # Installa (o aggiorna) Carhunt sul Raspberry con un comando solo.
 #
-#   curl -fsSL https://raw.githubusercontent.com/giovannidessi/raspberry/BRANCH/carhunt/deploy.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/giovannidessi/raspberry/BRANCH/projects/ai-apps/carhunt/deploy.sh | bash
 #
-# oppure, se il repo e' gia' clonato:  cd ~/raspberry/carhunt && ./deploy.sh
+# oppure, se il repo e' gia' clonato:  cd ~/raspberry/projects/ai-apps/carhunt && ./deploy.sh
 #
 # Variabili opzionali (per l'uso non interattivo):
 #   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, CARHUNT_PORT, CARHUNT_BRANCH, CARHUNT_DIR
@@ -61,7 +61,7 @@ else
     git clone --quiet --branch "$BRANCH" "$REPO_URL" "$TARGET_DIR"
 fi
 
-APP_DIR="$TARGET_DIR/carhunt"
+APP_DIR="$TARGET_DIR/projects/ai-apps/carhunt"
 [ -d "$APP_DIR" ] || die "cartella $APP_DIR non trovata"
 cd "$APP_DIR"
 
