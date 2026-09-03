@@ -27,7 +27,24 @@ webapp (browser)  ──►  FastAPI  ──►  provider (Subito, AutoScout24, 
 ## Avvio rapido sul Raspberry
 
 Docker e docker compose si installano con lo script già presente nel repo
-(`../config_scripts.sh`).
+(`../config_scripts.sh`). Poi, dal Raspberry, un comando solo:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/giovannidessi/raspberry/claude/car-search-telegram-notifications-n4mtho/carhunt/deploy.sh | bash
+```
+
+Lo script clona (o aggiorna) il repo, chiede il token del bot, **ricava da solo il chat id**
+dopo che hai scritto un messaggio al bot, costruisce l'immagine, avvia il servizio, aspetta
+che risponda e manda un messaggio di prova su Telegram. Rilanciarlo aggiorna l'installazione
+senza toccare `.env` né i dati.
+
+Non interattivo (per esempio da uno script tuo):
+
+```bash
+TELEGRAM_BOT_TOKEN=... TELEGRAM_CHAT_ID=... bash deploy.sh
+```
+
+A mano, se preferisci:
 
 ```bash
 cd carhunt
